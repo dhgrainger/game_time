@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+  <title>NFL Standings</title>
+  <link rel="stylesheet" href="standings.css">
+  </head>
+
+  <body>
+
+    <h1>NFL Standings</h1>
+
+    <table>
+	    <tr>
+	    	<th>Team</th>
+	    	<th>Wins</th>
+	    	<th>Losses</th>
+	    </tr>
+	    	
+	    
+		    <% @standings.each do |team| %>
+		    
+		    	<tr>
+		    		<td><%= team[:team_name] %></td>
+		    		<td><%= team[:wins] %></td>
+		    		<td><%= team[:losses] %></td>
+	    		</tr>
+	    		
+	   			<% end %>    	
+	</table>
+	
+  </body>
+</html>
